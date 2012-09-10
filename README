@@ -1,0 +1,97 @@
+########################################################################## 
+						
+							RawVideoPlayer
+							 Version: 1.0
+						   Author: Anil M S	
+
+########################################################################## 
+
+___________
+DESCRIPTION
+~~~~~~~~~~~
+	RawVideoPlayer is a simple utility intended for Video Engineers
+	to view/compare the Raw Video Files. It can play one/two files 
+	at a time. All the Raw (YUV/RGB) formats are supported. The
+	framerate, displaywidth and displayheight can be modified.
+
+The different Raw Video Formats supported are:
+
+	+-------------------------------------------+
+	|					|						|
+	|	yuv420			|		yuv444 Planar	|
+	|	yvu420			|		yvu444 Planar	|
+	|					|		uyv444 Planar	|
+	|	yuv422			|		             	|
+	|	yvu422			|		yuv444 Packed	|
+	|	      			|		yvu444 Packed	|
+	|	uyvy  			|		uyv444 Packed	|
+	|	yuyv			|		             	|
+	|	yvyu  			|		             	|
+	|	          		|		             	|
+	+-------------------------------------------+
+
+	For all formats both Progressive and Interlaced 
+	formats are supported.
+
+
+	RawVideoPlayer uses OpenGL GLUT for Video Rendering. So
+	in order to build from the sources, OpenGL and OpenGL GLUT
+	needs to be installed.
+
+	You can download OpenGL and GLUT packages from:
+		OpenGL 1.1:	http://www.berkelium.com/OpenGL/sgi-download.html
+		GLUT 3.0  :	http://www.opengl.org/resources/libraries/glut/
+
+
+___________
+COMPILATION
+~~~~~~~~~~~
+
+Unix Like Systems:
+
+	Type make
+	This will create the executable.
+
+Windows:
+	
+	VC++ 6.0 Project is included in the package.
+	Open the Project and compile to get the executable.
+	
+So far I have tested only on cygwin and VC++. But this
+should work on all systems.
+
+
+_____
+USAGE
+~~~~~
+	./rawvideoplayer.exe [OPTION] [FILE1] [FILE2]
+	Type ./yuvconverter.exe for more details
+
+
+_______
+COPYING
+~~~~~~~
+Please see COPYING file for License issues.
+
+
+_______________
+ACKNOWLEGEMENTS
+~~~~~~~~~~~~~~~
+	The Idea of RawVideoPlayer was inspired by the 'MULTIPLAYER'
+	program written by Gopal G. K. 
+		http://multiplayer.sourceforge.net
+
+	Also I would like to thank all the people in the open source
+	community. The examples and tutorials on OpenGL, and help
+	from a lot of forums helped me use the OpenGL utilities for
+	Video Rendering. Finally I would like to thank the people
+	behind sourceforge.net for allowing me to host the project
+	on their site.
+
+
+___________
+BUG REPORTS
+~~~~~~~~~~~
+Please Report all bugs to dxxx.sourceforge@gmail.com	
+
+
