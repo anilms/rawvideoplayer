@@ -70,20 +70,17 @@ void uyvyProgPackedToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy1)];	
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrsrccb1 += 4;
@@ -91,7 +88,6 @@ void uyvyProgPackedToRGBA(
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb2);
@@ -106,20 +102,17 @@ void uyvyProgPackedToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy2)];	
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrsrccb2 += 4;
@@ -127,7 +120,6 @@ void uyvyProgPackedToRGBA(
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 
 			/* Third Line */
@@ -143,20 +135,17 @@ void uyvyProgPackedToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy3)];	
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrsrccb3 += 4;
@@ -164,7 +153,6 @@ void uyvyProgPackedToRGBA(
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4);
@@ -179,20 +167,17 @@ void uyvyProgPackedToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy4)];	
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrsrccb4 += 4;
@@ -200,7 +185,6 @@ void uyvyProgPackedToRGBA(
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -236,10 +220,6 @@ void uyvyProgPackedToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -297,20 +277,17 @@ void uyvyIntPackedToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy1)];	
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrsrccb1 += 4;
@@ -318,7 +295,6 @@ void uyvyIntPackedToRGBA(
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb3);
@@ -333,20 +309,17 @@ void uyvyIntPackedToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy3)];	
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrsrccb3 += 4;
@@ -354,7 +327,6 @@ void uyvyIntPackedToRGBA(
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 
 			/* Third Line */
@@ -370,20 +342,17 @@ void uyvyIntPackedToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy2)];	
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrsrccb2 += 4;
@@ -391,7 +360,6 @@ void uyvyIntPackedToRGBA(
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4);
@@ -406,20 +374,17 @@ void uyvyIntPackedToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy4)];	
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrsrccb4 += 4;
@@ -427,7 +392,6 @@ void uyvyIntPackedToRGBA(
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -463,10 +427,6 @@ void uyvyIntPackedToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -524,20 +484,17 @@ void yuyvProgPackedToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy1)];	
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrsrccb1 += 4;
@@ -545,7 +502,6 @@ void yuyvProgPackedToRGBA(
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb2);
@@ -560,20 +516,17 @@ void yuyvProgPackedToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy2)];	
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrsrccb2 += 4;
@@ -581,7 +534,6 @@ void yuyvProgPackedToRGBA(
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 
 			/* Third Line */
@@ -597,20 +549,17 @@ void yuyvProgPackedToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy3)];	
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrsrccb3 += 4;
@@ -618,7 +567,6 @@ void yuyvProgPackedToRGBA(
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4);
@@ -633,20 +581,17 @@ void yuyvProgPackedToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy4)];	
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrsrccb4 += 4;
@@ -654,7 +599,6 @@ void yuyvProgPackedToRGBA(
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -690,10 +634,6 @@ void yuyvProgPackedToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -751,20 +691,17 @@ void yuyvIntPackedToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy1)];	
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrsrccb1 += 4;
@@ -772,7 +709,6 @@ void yuyvIntPackedToRGBA(
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb3);
@@ -787,20 +723,17 @@ void yuyvIntPackedToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy3)];	
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrsrccb3 += 4;
@@ -808,7 +741,6 @@ void yuyvIntPackedToRGBA(
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 
 			/* Third Line */
@@ -824,20 +756,17 @@ void yuyvIntPackedToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy2)];	
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrsrccb2 += 4;
@@ -845,7 +774,6 @@ void yuyvIntPackedToRGBA(
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4);
@@ -860,20 +788,17 @@ void yuyvIntPackedToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy4)];	
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrsrccb4 += 4;
@@ -881,7 +806,6 @@ void yuyvIntPackedToRGBA(
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -917,10 +841,6 @@ void yuyvIntPackedToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -978,20 +898,17 @@ void yvyuProgPackedToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy1)];	
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrsrccb1 += 4;
@@ -999,7 +916,6 @@ void yvyuProgPackedToRGBA(
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb2);
@@ -1014,20 +930,17 @@ void yvyuProgPackedToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy2)];	
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrsrccb2 += 4;
@@ -1035,7 +948,6 @@ void yvyuProgPackedToRGBA(
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 
 			/* Third Line */
@@ -1051,20 +963,17 @@ void yvyuProgPackedToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy3)];	
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrsrccb3 += 4;
@@ -1072,7 +981,6 @@ void yvyuProgPackedToRGBA(
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4);
@@ -1087,20 +995,17 @@ void yvyuProgPackedToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy4)];	
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrsrccb4 += 4;
@@ -1108,7 +1013,6 @@ void yvyuProgPackedToRGBA(
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -1144,10 +1048,6 @@ void yvyuProgPackedToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -1205,20 +1105,17 @@ void yvyuIntPackedToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy1)];	
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrsrcy1 += 2;
 			ptrsrccb1 += 4;
@@ -1226,7 +1123,6 @@ void yvyuIntPackedToRGBA(
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb3);
@@ -1241,20 +1137,17 @@ void yvyuIntPackedToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy3)];	
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrsrcy3 += 2;
 			ptrsrccb3 += 4;
@@ -1262,7 +1155,6 @@ void yvyuIntPackedToRGBA(
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 
 			/* Third Line */
@@ -1278,20 +1170,17 @@ void yvyuIntPackedToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Top Right */
 			y = tab_76309[(*ptrsrcy2)];	
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrsrcy2 += 2;
 			ptrsrccb2 += 4;
@@ -1299,7 +1188,6 @@ void yvyuIntPackedToRGBA(
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4);
@@ -1314,20 +1202,17 @@ void yvyuIntPackedToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 			/* Bottom Right */
 			y = tab_76309[(*ptrsrcy4)];	
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrsrcy4 += 2;
 			ptrsrccb4 += 4;
@@ -1335,7 +1220,6 @@ void yvyuIntPackedToRGBA(
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -1371,10 +1255,6 @@ void yvyuIntPackedToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }

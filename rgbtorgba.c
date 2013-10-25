@@ -53,43 +53,35 @@ void rgbProgPlanarToRGBA(
 			(*ptrdestr1) = (*ptrsrcr1++);
 			(*ptrdestg1) = (*ptrsrcg1++);
 			(*ptrdestb1) = (*ptrsrcb1++);
-			(*ptrdesta1) = 0xff;
 
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			(*ptrdestr2) = (*ptrsrcr2++);
 			(*ptrdestg2) = (*ptrsrcg2++);
 			(*ptrdestb2) = (*ptrsrcb2++);
-			(*ptrdesta2) = 0xff;
 
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			(*ptrdestr3) = (*ptrsrcr3++);
 			(*ptrdestg3) = (*ptrsrcg3++);
 			(*ptrdestb3) = (*ptrsrcb3++);
-			(*ptrdesta3) = 0xff;
 
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 
 			(*ptrdestr4) = (*ptrsrcr4++);
 			(*ptrdestg4) = (*ptrsrcg4++);
 			(*ptrdestb4) = (*ptrsrcb4++);
-			(*ptrdesta4) = 0xff;
 
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 
 		}
@@ -127,10 +119,6 @@ void rgbProgPlanarToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -174,7 +162,6 @@ void rgbProgPackedToRGBA(
 			(*ptrdestr1) = (*ptrsrcr1);
 			(*ptrdestg1) = (*ptrsrcg1);
 			(*ptrdestb1) = (*ptrsrcb1);
-			(*ptrdesta1) = 0xff;
 
 			ptrsrcr1 += 3;
 			ptrsrcg1 += 3;
@@ -183,13 +170,11 @@ void rgbProgPackedToRGBA(
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 
 			(*ptrdestr2) = (*ptrsrcr2);
 			(*ptrdestg2) = (*ptrsrcg2);
 			(*ptrdestb2) = (*ptrsrcb2);
-			(*ptrdesta2) = 0xff;
 
 			ptrsrcr2 += 3;
 			ptrsrcg2 += 3;
@@ -198,13 +183,11 @@ void rgbProgPackedToRGBA(
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 
 			(*ptrdestr3) = (*ptrsrcr3);
 			(*ptrdestg3) = (*ptrsrcg3);
 			(*ptrdestb3) = (*ptrsrcb3);
-			(*ptrdesta3) = 0xff;
 
 			ptrsrcr3 += 3;
 			ptrsrcg3 += 3;
@@ -213,13 +196,11 @@ void rgbProgPackedToRGBA(
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 
 			(*ptrdestr4) = (*ptrsrcr4);
 			(*ptrdestg4) = (*ptrsrcg4);
 			(*ptrdestb4) = (*ptrsrcb4);
-			(*ptrdesta4) = 0xff;
 
 			ptrsrcr4 += 3;
 			ptrsrcg4 += 3;
@@ -228,7 +209,6 @@ void rgbProgPackedToRGBA(
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 
 		}
@@ -266,10 +246,6 @@ void rgbProgPackedToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -315,43 +291,35 @@ void bgrProgPlanarToRGBA(
 			(*ptrdestr1) = (*ptrsrcr1++);
 			(*ptrdestg1) = (*ptrsrcg1++);
 			(*ptrdestb1) = (*ptrsrcb1++);
-			(*ptrdesta1) = 0xff;
 
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			(*ptrdestr2) = (*ptrsrcr2++);
 			(*ptrdestg2) = (*ptrsrcg2++);
 			(*ptrdestb2) = (*ptrsrcb2++);
-			(*ptrdesta2) = 0xff;
 
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			(*ptrdestr3) = (*ptrsrcr3++);
 			(*ptrdestg3) = (*ptrsrcg3++);
 			(*ptrdestb3) = (*ptrsrcb3++);
-			(*ptrdesta3) = 0xff;
 
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 
 			(*ptrdestr4) = (*ptrsrcr4++);
 			(*ptrdestg4) = (*ptrsrcg4++);
 			(*ptrdestb4) = (*ptrsrcb4++);
-			(*ptrdesta4) = 0xff;
 
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 
 		}
@@ -389,10 +357,6 @@ void bgrProgPlanarToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -437,7 +401,6 @@ void bgrProgPackedToRGBA(
 			(*ptrdestr1) = (*ptrsrcr1);
 			(*ptrdestg1) = (*ptrsrcg1);
 			(*ptrdestb1) = (*ptrsrcb1);
-			(*ptrdesta1) = 0xff;
 
 			ptrsrcr1 += 3;
 			ptrsrcg1 += 3;
@@ -446,13 +409,11 @@ void bgrProgPackedToRGBA(
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 
 			(*ptrdestr2) = (*ptrsrcr2);
 			(*ptrdestg2) = (*ptrsrcg2);
 			(*ptrdestb2) = (*ptrsrcb2);
-			(*ptrdesta2) = 0xff;
 
 			ptrsrcr2 += 3;
 			ptrsrcg2 += 3;
@@ -461,13 +422,11 @@ void bgrProgPackedToRGBA(
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 
 			(*ptrdestr3) = (*ptrsrcr3);
 			(*ptrdestg3) = (*ptrsrcg3);
 			(*ptrdestb3) = (*ptrsrcb3);
-			(*ptrdesta3) = 0xff;
 
 			ptrsrcr3 += 3;
 			ptrsrcg3 += 3;
@@ -476,13 +435,11 @@ void bgrProgPackedToRGBA(
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 
 			(*ptrdestr4) = (*ptrsrcr4);
 			(*ptrdestg4) = (*ptrsrcg4);
 			(*ptrdestb4) = (*ptrsrcb4);
-			(*ptrdesta4) = 0xff;
 
 			ptrsrcr4 += 3;
 			ptrsrcg4 += 3;
@@ -491,7 +448,6 @@ void bgrProgPackedToRGBA(
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 
 		}
@@ -529,10 +485,6 @@ void bgrProgPackedToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }

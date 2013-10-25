@@ -69,12 +69,10 @@ void yuv444ProgPlanarToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb2++);
@@ -87,12 +85,10 @@ void yuv444ProgPlanarToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Third Line */
 			u = (*ptrsrccb3++);
@@ -105,12 +101,10 @@ void yuv444ProgPlanarToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4++);
@@ -123,12 +117,10 @@ void yuv444ProgPlanarToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -164,10 +156,6 @@ void yuv444ProgPlanarToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -225,12 +213,10 @@ void yuv444IntPlanarToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb3++);
@@ -243,12 +229,10 @@ void yuv444IntPlanarToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Third Line */
 			u = (*ptrsrccb2++);
@@ -261,12 +245,10 @@ void yuv444IntPlanarToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4++);
@@ -279,12 +261,10 @@ void yuv444IntPlanarToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -320,10 +300,6 @@ void yuv444IntPlanarToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -380,12 +356,10 @@ void yvu444ProgPlanarToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb2++);
@@ -398,12 +372,10 @@ void yvu444ProgPlanarToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Third Line */
 			u = (*ptrsrccb3++);
@@ -416,12 +388,10 @@ void yvu444ProgPlanarToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4++);
@@ -434,12 +404,10 @@ void yvu444ProgPlanarToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -475,10 +443,6 @@ void yvu444ProgPlanarToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -535,12 +499,10 @@ void yvu444IntPlanarToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb3++);
@@ -553,12 +515,10 @@ void yvu444IntPlanarToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Third Line */
 			u = (*ptrsrccb2++);
@@ -571,12 +531,10 @@ void yvu444IntPlanarToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4++);
@@ -589,12 +547,10 @@ void yvu444IntPlanarToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -630,10 +586,6 @@ void yvu444IntPlanarToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -690,12 +642,10 @@ void uyv444ProgPlanarToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb2++);
@@ -708,12 +658,10 @@ void uyv444ProgPlanarToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Third Line */
 			u = (*ptrsrccb3++);
@@ -726,12 +674,10 @@ void uyv444ProgPlanarToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4++);
@@ -744,12 +690,10 @@ void uyv444ProgPlanarToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -785,10 +729,6 @@ void uyv444ProgPlanarToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }
@@ -845,12 +785,10 @@ void uyv444IntPlanarToRGBA(
 			(*ptrdestr1) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg1) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb1) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta1) = 0xFF;
 
 			ptrdestr1 += 4;
 			ptrdestg1 += 4;
 			ptrdestb1 += 4;
-			ptrdesta1 += 4;
 
 			/* Second Line */	
 			u = (*ptrsrccb3++);
@@ -863,12 +801,10 @@ void uyv444IntPlanarToRGBA(
 			(*ptrdestr2) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg2) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb2) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta2) = 0xFF;
 
 			ptrdestr2 += 4;
 			ptrdestg2 += 4;
 			ptrdestb2 += 4;
-			ptrdesta2 += 4;
 
 			/* Third Line */
 			u = (*ptrsrccb2++);
@@ -881,12 +817,10 @@ void uyv444IntPlanarToRGBA(
 			(*ptrdestr3) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg3) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb3) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta3) = 0xFF;
 
 			ptrdestr3 += 4;
 			ptrdestg3 += 4;
 			ptrdestb3 += 4;
-			ptrdesta3 += 4;
 
 			/* Fourth Line */
 			u = (*ptrsrccb4++);
@@ -899,12 +833,10 @@ void uyv444IntPlanarToRGBA(
 			(*ptrdestr4) = clp[384+((y + crv)>>16)];  
 			(*ptrdestg4) = clp[384+((y - cgu - cgv)>>16)];
             (*ptrdestb4) = clp[384+((y + cbu)>>16)];
-			(*ptrdesta4) = 0xFF;
 
 			ptrdestr4 += 4;
 			ptrdestg4 += 4;
 			ptrdestb4 += 4;
-			ptrdesta4 += 4;
 
 		}
 
@@ -940,10 +872,6 @@ void uyv444IntPlanarToRGBA(
 		ptrdestb3 += destrgbastride;
 		ptrdestb4 += destrgbastride;
 
-		ptrdesta1 += destrgbastride;
-		ptrdesta2 += destrgbastride;
-		ptrdesta3 += destrgbastride;
-		ptrdesta4 += destrgbastride;
 
 	}
 }

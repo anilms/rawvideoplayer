@@ -15,7 +15,7 @@ Description:
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
-#include <GL/glut.h>
+#include "glut.h"
 #endif
 
 #include "rawvideoplayer.h"
@@ -30,6 +30,7 @@ int framenum = 0;
 float framerate = 25;
 int frameinterval = 40;
 int nTime, nLastTime;
+int gridOn = 0;
 
 extern FILE *infile1;
 extern char *infile1_name;
@@ -48,9 +49,11 @@ void GenTexture()
 {
 	GenOutputBuf();
 
+	glEnable(GL_BLEND);
 	glEnable(GL_TEXTURE_2D);
-	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 	glBindTexture(GL_TEXTURE_2D, textureid);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -272,9 +275,22 @@ void VideoOutInit(
 	rgba_buffer = (unsigned char *)malloc(texwidth*texheight*4);
 	if(rgba_buffer != NULL)
 	{
-		memset(rgba_buffer, 0, texwidth*texheight*4);
-		for(i=3; i<texwidth*texheight*4; i+=4)
-			rgba_buffer[i]=0xFF;	// set alpha values to 0xFF
+		memset(rgba_buffer, 0xFF, texwidth*texheight*4);
+
+		// Gridlines
+		if(gridOn) {
+			// Horizontal gridlines
+			for(int j=15; j<texheight; j+=16) {
+				for(int i=0; i<texwidth; i++)
+					rgba_buffer[(j*texwidth+i)*4+3] = 0x00;
+			}
+
+			// Vertical gridlines
+			for(int i=15; i<texwidth; i+=16) {
+				for(int j=0; j<texheight; j++)
+					rgba_buffer[(j*texwidth+i)*4+3] = 0x00;
+			}
+		}
 	}
 	else
 	{

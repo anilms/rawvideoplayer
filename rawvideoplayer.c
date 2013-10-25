@@ -16,7 +16,7 @@ RAW Video File Viewer
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
-#include <GL/glut.h>
+#include "glut.h"
 #endif
 
 
@@ -45,6 +45,7 @@ unsigned char *outputbuf;
 extern float framerate;
 extern int frameinterval;
 extern int framenum;
+extern int gridOn;
 extern unsigned char *rgba_buffer;
 
 
@@ -146,6 +147,7 @@ void usage(char *str)
    printf("\n  |      -f : Frame Rate                          |");
    printf("\n  |      -m : Input Mode                          |");
    printf("\n  |      -k : Scale Factor                        |");
+   printf("\n  |      -g : Grid On                             |");
    printf("\n  +-----------------------------------------------+");
    printf("\n  |  Modes Supported                              |");
    printf("\n  +-----------------------------------------------+");
@@ -235,6 +237,11 @@ void ParseArgs(int argc, char **argv)
            			if (argv[i] == NULL)
                		usage(argv[0]);
            			scale = atof(argv[i]);
+           			break;
+         		case 'g':
+           			if (argv[i] == NULL)
+               		usage(argv[0]);
+           			gridOn = atof(argv[i]);
            			break;
          		case 'l':
            			if (argv[i] == NULL)
