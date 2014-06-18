@@ -159,6 +159,7 @@ void usage(char *str)
    printf("\n  |      YUV420 Int  Planar          |      1     |");
    printf("\n  |      YVU420 Prog Planar          |      2     |");
    printf("\n  |      YVU420 Int Planar           |      3     |");
+   printf("\n  |      YUV420 YCbCr Planar         |      4     |");
    printf("\n  +-----------------------------------------------+");
    printf("\n  |      YUV422 Prog Planar          |     10     |");
    printf("\n  |      YUV422 Int Planar           |     11     |");

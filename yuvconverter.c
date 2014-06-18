@@ -50,6 +50,11 @@ void InitConverter(int width, int height, int mode)
 					inframesize = (width * height * 3)>>1;
 					break;
 
+		case 4:		GetRGBAFrame = yuv420YCbCrPlanarToRGBA;
+					inframesize = (width * height * 3)>>1;
+					break;
+
+
 
 
 		/* YUV 422 to RGBA */

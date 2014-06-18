@@ -30,6 +30,7 @@ void yuv420ProgPlanarToRGBA(unsigned char *bufsrc, unsigned char *bufdest,int wi
 void yuv420IntPlanarToRGBA(unsigned char *bufsrc, unsigned char *bufdest,int width, int height);
 void yvu420ProgPlanarToRGBA(unsigned char *bufsrc, unsigned char *bufdest,int width, int height);
 void yvu420IntPlanarToRGBA(unsigned char *bufsrc, unsigned char *bufdest,int width, int height);
+void yuv420YCbCrPlanarToRGBA(unsigned char *bufsrc, unsigned char *bufdest,int width, int height);
 
 
 /* YUV 422 to RGBA */

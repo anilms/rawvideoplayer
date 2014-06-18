@@ -111,4 +111,29 @@ Description:
 #endif
 
 
+#ifdef YUV_420_PLANAR_YCBCR
+#ifdef SRC
+	unsigned char *ptrsrcy1, *ptrsrcy2;
+	unsigned char *ptrsrcy3, *ptrsrcy4;
+   	unsigned char *ptrsrccb1, *ptrsrccb2;
+   	unsigned char *ptrsrccr1, *ptrsrccr2;
+	int srcystride, srcccstride;
+
+	ptrsrcy1 = bufsrc;
+	ptrsrcy2 = bufsrc + width;
+	ptrsrcy3 = bufsrc + width*2;
+	ptrsrcy4 = bufsrc + width*3;
+	
+	ptrsrccb1 = bufsrc + width*height;	
+	ptrsrccb2 = bufsrc + width*height + width;	
+	
+	ptrsrccr1 = bufsrc + width*height + 1;	
+	ptrsrccr2 = bufsrc + width*height + 1 + width;	
+
+	srcystride  = (width)*3;
+	srcccstride = (width);
+#endif
+#endif
+
+
 

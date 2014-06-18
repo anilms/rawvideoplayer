@@ -218,6 +218,7 @@ void event_animate(void)
 {
 	glutPostRedisplay();
 	printf("\rFrame: %d", framenum);
+    fflush(stdout);
 }
 
 
