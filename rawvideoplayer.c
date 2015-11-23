@@ -37,10 +37,12 @@ int framewidth = 352;
 int frameheight = 288;
 int dispwidth = 0;
 int dispheight = 0;
+int bitdepth = 8;
 int inframesize;
 int conv_mode = 0;
 float scale=1;
 unsigned char *outputbuf;
+unsigned short *outputbuf16;
 
 extern float framerate;
 extern int frameinterval;
@@ -63,8 +65,12 @@ void Init()
 	if (dispwidth<=0) dispwidth = framewidth;
 	if (dispheight<=0) dispheight = frameheight;
 	outputbuf = (unsigned char *)malloc(framewidth*frameheight*3);
+
+  if (bitdepth == 10) {
+    outputbuf16 = (unsigned short *)malloc(framewidth*frameheight * 3 * 2);
+  }
 	
-	if(outputbuf == NULL)
+	if((outputbuf == NULL) || (outputbuf16 == NULL))
 	{
 		printf("\nAllocating Buffers failed! Not Enough Memory.");
 		printf("\nExiting !!!");
@@ -90,14 +96,26 @@ void GenOutputBuf()
 	int i;
 	unsigned char *bufin;
 	unsigned char *bufout;
-	int width, height;
+  unsigned short *bufin16;
+  int width, height;
+  int shift = bitdepth - 8;
 
 	bufin = outputbuf;
-	bufout = rgba_buffer;
+  bufin16 = outputbuf16;
+  bufout = rgba_buffer;
 	width = framewidth;
 	height = frameheight;
 
-	fread(bufin, 1, inframesize, infile1);
+  if (bitdepth == 10) {
+    fread(bufin16, 2, inframesize, infile1);
+    for (i = 0; i<inframesize; i++)
+      bufin[i] = bufin16[i] >> shift;
+  }
+  else {
+    fread(bufin, 1, inframesize, infile1);
+  }
+
+
 	if(scale!=1)
 		for(i=0; i<inframesize; i++)
 			bufin[i] = MIN(255, bufin[i]*scale);
@@ -107,7 +125,15 @@ void GenOutputBuf()
 		GetRGBAFrame(bufin, bufout, width, height);
 		if(bTwoFiles)
 		{
-			fread(bufin, 1, inframesize, infile2);
+      if (bitdepth == 10) {
+        fread(bufin16, 2, inframesize, infile2);
+        for (i = 0; i<inframesize; i++)
+          bufin[i] = bufin16[i] >> shift;
+      }
+      else {
+        fread(bufin, 1, inframesize, infile2);
+      }
+
 			if(scale!=1)
 				for(i=0; i<inframesize; i++)
 					bufin[i] = MIN(255, bufin[i]*scale);
@@ -145,6 +171,7 @@ void usage(char *str)
    printf("\n  |      -l : Display Width                       |");
    printf("\n  |      -b : Display Height                      |");
    printf("\n  |      -f : Frame Rate                          |");
+   printf("\n  |      -d : Bit depth                           |");
    printf("\n  |      -m : Input Mode                          |");
    printf("\n  |      -k : Scale Factor                        |");
    printf("\n  |      -g : Grid On                             |");
@@ -254,7 +281,12 @@ void ParseArgs(int argc, char **argv)
                		usage(argv[0]);
            			dispheight = atoi(argv[i]);
            			break;
-         		default:
+            case 'd':
+              if (argv[i] == NULL)
+                usage(argv[0]);
+              bitdepth = atoi(argv[i]);
+              break;
+            default:
            			usage(argv[0]);
       		}
     	}

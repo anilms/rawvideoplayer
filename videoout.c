@@ -257,7 +257,7 @@ void VideoOutInit(
 					)
 {
 
-	int i, size;
+	int size;
 
 	/* Initialize texture width to nearest power of 2 */
 	size = 1;
