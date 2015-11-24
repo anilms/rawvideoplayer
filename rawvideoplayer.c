@@ -65,10 +65,7 @@ void Init()
 	if (dispwidth<=0) dispwidth = framewidth;
 	if (dispheight<=0) dispheight = frameheight;
 	outputbuf = (unsigned char *)malloc(framewidth*frameheight*3);
-
-  if (bitdepth == 10) {
-    outputbuf16 = (unsigned short *)malloc(framewidth*frameheight * 3 * 2);
-  }
+  outputbuf16 = (unsigned short *)malloc(framewidth*frameheight * 3 * 2);
 	
 	if((outputbuf == NULL) || (outputbuf16 == NULL))
 	{
