@@ -1,33 +1,29 @@
-CC = gcc
-CFLAGS = 
+CC=gcc
+CFLAGS=
 
 ifeq ($(shell uname),Darwin)
-    LIBS = -framework OpenGL -framework GLUT
-else	
-	LIBS = -lglut
+LIBS=-framework OpenGL -framework GLUT
+else
+LIBS=-lGL -lglut
 endif
 
-SOURCES = $(wildcard *.c)
-OBJ_DIR = Debug
+SOURCES=$(wildcard *.c)
+OBJ_DIR=Debug
 
-EXEC = rawvideoplayer 
-OBJECTS = $(SOURCES:%.c=$(OBJ_DIR)/%.o)
+EXEC=rawvideoplayer
+OBJECTS=$(SOURCES:%.c=$(OBJ_DIR)/%.o)
 
 all: createdirs $(EXEC)
 
 createdirs:
 	mkdir -p $(OBJ_DIR)
 
-$(EXEC) : $(OBJECTS) Makefile
+$(EXEC): $(OBJECTS) Makefile
 	$(CC) $(OBJECTS) $(LIBS) -o $(EXEC)
 
-$(OBJ_DIR)/%.o : %.c Makefile
+$(OBJ_DIR)/%.o: %.c Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf *~ *.o $(EXEC) $(OBJ_DIR)
-
-
-
-
 
