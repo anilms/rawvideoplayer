@@ -32,9 +32,108 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a id="rawvideoplayer" class="anchor" href="#rawvideoplayer" aria-hidden="true"><span class="octicon octicon-link"></span></a>rawvideoplayer</h1>
+<a id="rawvideoplayer" class="anchor" href="#rawvideoplayer" aria-hidden="true"><span class="octicon octicon-link"></span></a>RawVideoPlayer</h1>
 
-<p>RawVideoPlayer is a simple utility intended for Video Engineers to view/compare the Raw Video Files. It can play one/two files at a time. All the Raw (YUV/RGB) formats are supported. The framerate, displaywidth and displayheight can be modified.</p>
+<p>RawVideoPlayer is a simple utility intended for Video Engineers to view/compare the Raw Video Files.<br>
+It can play one/two files at a time for viewing or comparison.
+Many raw YUV and RGB formats and 8bpp or 10bpp files are supported.  </p>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<pre><code>+-----------------------------------------------+
+|  Options:                                     |
+|      -w : Width of frame                      |
+|      -h : Height of frame                     |
+|      -l : Display Width                       |
+|      -b : Display Height                      |
+|      -f : Frame Rate                          |
+|      -d : Bit depth                           |
+|      -m : Input Mode                          |
+|      -k : Scale Factor                        |
+|      -g : Grid On                             |
++-----------------------------------------------+
+</code></pre>
+
+<h2>
+<a id="modes-supported" class="anchor" href="#modes-supported" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modes Supported</h2>
+
+<pre><code>+-----------------------------------------------+
+|           Input Format           |    Mode    |
++-----------------------------------------------+
+|      Y Only                      |     -1     |
++-----------------------------------------------+
+|      YUV420 Prog Planar          |      0     |
+|      YUV420 Int  Planar          |      1     |
+|      YVU420 Prog Planar          |      2     |
+|      YVU420 Int Planar           |      3     |
+|      YUV420 YCbCr Planar         |      4     |
++-----------------------------------------------+
+|      YUV422 Prog Planar          |     10     |
+|      YUV422 Int Planar           |     11     |
+|      YVU422 Prog Planar          |     12     |
+|      YVU422 Int Planar           |     13     |
++-----------------------------------------------+
+|      UYVY Prog                   |     20     |
+|      UYVY Int                    |     21     |
+|      YUYV Prog                   |     22     |
+|      YUYV Int                    |     23     |
+|      YVYU Prog                   |     24     |
+|      YVYU Int                    |     25     |
++-----------------------------------------------+
+|      YUV444 Prog Planar          |     30     |
+|      YUV444 Int Planar           |     31     |
+|      YVU444 Prog Planar          |     32     |
+|      YVU444 Int Planar           |     33     |
+|      UYV444 Prog Planar          |     34     |
+|      UYV444 Int Planar           |     35     |
++-----------------------------------------------+
+|      YUV444 Prog Packed          |     40     |
+|      YUV444 Int Packed           |     41     |
+|      YVU444 Prog Packed          |     42     |
+|      YVU444 Int Packed           |     43     |
+|      UYV444 Prog Packed          |     44     |
+|      UYV444 Int Packed           |     45     |
++-----------------------------------------------+
+|      RGB Prog Planar             |     50     |
+|      RGB Prog Packed             |     51     |
+|      BGR Prog Planar             |     52     |
+|      BGR Prog Packed             |     53     |
++-----------------------------------------------+
+</code></pre>
+
+<h2>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
+
+<pre><code># View file
+rawvideoplayer infile1.yuv -w 352 -h 288
+</code></pre>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2180008/11584978/4febda50-9a1d-11e5-9c09-fa3ed4b1bbbf.jpg" alt="alt text" title="View file"></p>
+
+<pre><code># View 10 bit file (in Little Endian Format)
+rawvideoplayer infile1_10bpp.yuv -w 352 -h 288 -d 10
+</code></pre>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2180008/11584978/4febda50-9a1d-11e5-9c09-fa3ed4b1bbbf.jpg" alt="alt text" title="View file"></p>
+
+<pre><code># View monochrome file
+rawvideoplayer infile1_mono.yuv -w 352 -h 288 -m -1
+</code></pre>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2180008/11584976/4feb6bba-9a1d-11e5-801a-ea04b8da549e.jpg" alt="alt text" title="View file"></p>
+
+<pre><code># Compare two files
+rawvideoplayer infile1.yuv infile2.yuv -w 352 -h 288
+</code></pre>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2180008/11584979/4feee66e-9a1d-11e5-9b80-ccafb0ab9853.jpg" alt="alt text" title="Compare two files"></p>
+
+<pre><code># Compare two files with gridlines on
+rawvideoplayer infile1.yuv infile2.yuv -w 352 -h 288 -g 1
+</code></pre>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2180008/11584977/4feba26a-9a1d-11e5-955b-24302fd99cc9.jpg" alt="alt text" title="Use gridlines"></p>
       </section>
     </div>
 
